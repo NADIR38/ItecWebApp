@@ -1,0 +1,146 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ItecwebApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ItecwebApp.styles.css" asp-append-version="true" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary shadow-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold d-flex align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="fas fa-cube me-2 text-warning"></i>
+                    <span class="brand-text">ItecwebApp</span>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse d-lg-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1 me-auto">
+                        @if (HttpContextAccessor.HttpContext.Session.GetString("Username") != null)
+                        {
+                            @* Role-specific menus *@
+                            @if (HttpContextAccessor.HttpContext.Session.GetInt32("Role_Id") == 1)
+                            {
+                                <!-- Admin Dashboard with all controllers -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle nav-link-modern" href="#" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-user-shield me-1"></i>Admin Dashboard
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="adminDropdown">
+                                        <li><a class="dropdown-item" asp-controller="Events" asp-action="Index"><i class="fas fa-calendar me-2"></i>Events</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Editions" asp-action="Index"><i class="fas fa-calendar me-2"></i>Editions</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Participants" asp-action="Index"><i class="fas fa-users me-2"></i>Participants</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Vendor" asp-action="Index"><i class="fas fa-store me-2"></i>Vendors</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Sponsors" asp-action="Index"><i class="fas fa-handshake me-2"></i>Sponsors</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Venue" asp-action="Index"><i class="fas fa-building me-2"></i>Venue Editions</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Members" asp-action="Index"><i class="fas fa-user-tie me-2"></i>Committee Members</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Duties" asp-action="Index"><i class="fas fa-tasks me-2"></i>Duties</a></li>
+                                    </ul>
+                                </li>
+                            }
+                            else if (HttpContextAccessor.HttpContext.Session.GetInt32("Role_Id") == 2)
+                            {
+                                <!-- Faculty - Show Home Controller -->
+                             
+                                <li class="nav-item">
+                                    <a class="nav-link nav-link-modern" asp-controller="Members" asp-action="Index">
+                                        <i class="fas fa-home me-1"></i>Members
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link nav-link-modern" asp-controller="Duties" asp-action="Index">
+                                        <i class="fas fa-home me-1"></i>Duties
+                                    </a>
+                                </li>
+                            }
+                            else if (HttpContextAccessor.HttpContext.Session.GetInt32("Role_Id") == 3)
+                            {
+                                <!-- Student - Show Members Controller -->
+                                <li class="nav-item">
+                                    <a class="nav-link nav-link-modern" asp-controller="Members" asp-action="Index">
+                                        <i class="fas fa-users me-1"></i>Members
+                                    </a>
+                                </li>
+                            }
+                        }
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        @if (HttpContextAccessor.HttpContext.Session.GetString("Username") != null)
+                        {
+                            <li class="nav-item">
+                                <span class="navbar-text text-light">
+                                    <i class="fas fa-user me-1"></i>Hello, @HttpContextAccessor.HttpContext.Session.GetString("Username")
+                                </span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" asp-controller="Account" asp-action="Logout">
+                                    <i class="fas fa-sign-out-alt me-1"></i>Logout
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Account" asp-action="Login">
+                                    <i class="fas fa-sign-in-alt me-1"></i>Login
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Account" asp-action="Signup">
+                                    <i class="fas fa-user-plus me-1"></i>Signup
+                                </a>
+                            </li>
+                        }
+                        <li class="nav-item">
+                            <span class="navbar-text text-light">
+                                <i class="fas fa-clock me-1"></i><span id="current-time"></span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-wrapper">
+        <main role="main" class="main-content">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer-modern mt-auto">
+        <div class="container text-center">
+            <i class="fas fa-copyright me-1"></i>
+            <span>@DateTime.Now.Year ItecwebApp. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' });
+            document.getElementById('current-time').textContent = timeString;
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

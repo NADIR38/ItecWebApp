@@ -1,0 +1,114 @@
+﻿@model ItecwebApp.Models.Participants
+
+@{
+    ViewData["Title"] = "Edit Participant";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+<div>
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success">@TempData["Message"]</div>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+    }
+</div>
+
+<form asp-action="Edit" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+
+    <div class="container mt-5">
+        <h2 class="text-primary" style="color:#112d40">Edit Participant</h2>
+
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" type="email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="phone" class="form-label"></label>
+            <input asp-for="phone" type="tel" class="form-control" />
+            <span asp-validation-for="phone" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="institute" class="form-label"></label>
+            <input asp-for="institute" class="form-control" />
+            <span asp-validation-for="institute" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="year" class="form-label">Edition year</label>
+            <input asp-for="year" class="form-control" />
+            <span asp-validation-for="year" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="role" class="form-label"></label>
+            <select asp-for="role" class="form-control">
+                <option value="Professional" selected="@(Model.role == "Professional")">Professional</option>
+                <option value="Judge" selected="@(Model.role == "Judge")">Judge</option>
+                <option value="Guest Speaker" selected="@(Model.role == "Guest Speaker")">Guest Speaker</option>
+            </select>
+            <span asp-validation-for="role" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="event_name" class="form-label"></label>
+            <select asp-for="event_name" class="form-control select2">
+                <option value="">-- Select Event --</option>
+                @foreach (var eventName in (List<string>)ViewBag.EventNames)
+                {
+                    <option value="@eventName" selected="@(eventName == Model.event_name)">
+                        @eventName
+                    </option>
+                }
+            </select>
+            <span asp-validation-for="event_name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="feeamount" class="form-label">Fee</label>
+            <input asp-for="feeamount" type="text" class="form-control" />
+            <span asp-validation-for="feeamount" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="payment_status" class="form-label"></label>
+            <select asp-for="payment_status" class="form-control">
+                <option value="Paid" selected="@(Model.payment_status == "Paid")">Paid</option>
+                <option value="Pending" selected="@(Model.payment_status == "Pending")">Pending</option>
+                <option value="Canceled" selected="@(Model.payment_status == "Canceled")">Canceled</option>
+            </select>
+            <span asp-validation-for="payment_status" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success">Update Participant</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.select2').select2({
+            placeholder: "Search or select an event",
+            allowClear: true,
+            width: '100%'
+        });
+    });
+</script>

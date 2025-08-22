@@ -1,0 +1,45 @@
+﻿@model ItecwebApp.Models.Duties
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h2 class="text-center mb-4">Assign Duty</h2>
+
+    <form asp-action="Create" method="post">
+        @Html.AntiForgeryToken()
+
+        <div class="mb-3">
+            <label class="form-label">Member Name</label>
+            <input asp-for="name" class="form-control" readonly />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Committee Name</label>
+            <input asp-for="committee_name" class="form-control" readonly />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Task Description</label>
+            <input asp-for="description" class="form-control" placeholder="Enter duty details" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Deadline</label>
+            <input asp-for="Deadline" type="date" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Status</label>
+            <select asp-for="status" class="form-control" required>
+                <option value="">-- Select Status --</option>
+                <option value="Pending">Pending</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-success">Save Duty</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

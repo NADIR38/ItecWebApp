@@ -1,0 +1,31 @@
+﻿@model List<Edition> 
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container mt-5">
+    <h2 class="text-primary" style="color:#112d40">🐣 Editions</h2>
+
+    <a asp-action="Create" class="btn btn-primary mb-3">➕ Add New Edition</a>
+    </div>
+    <div class="table-wrapper">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Edition Year</th>
+                <th>Description</th>
+                <th>Theme</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var edition in Model)
+            {
+                <tr>
+                    <td>@edition.Year</td>
+                    <td>@edition.Description</td>
+                    <td>@edition.Theme</td>
+                </tr>
+            }
+        </tbody>
+	</table>
+    </div>

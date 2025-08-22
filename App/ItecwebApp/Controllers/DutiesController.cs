@@ -1,0 +1,91 @@
+﻿using ItecwebApp.Interfaces;
+using ItecwebApp.Models;
+using Microsoft.AspNetCore.Mvc;
+
+namespace ItecwebApp.Controllers
+{
+    public class DutiesController : Controller
+    {
+        private readonly IDutiesDAl idl;
+        public DutiesController(IDutiesDAl idl)
+        {
+            this.idl = idl;
+        }
+
+        public IActionResult Index()
+        {
+            var list = idl.getduties();
+            return View(list);
+        }
+
+        [HttpGet]
+        public IActionResult Create(string name, string committeename)
+        {
+            var model = new Duties
+            {
+                name = name,
+                committee_name = committeename
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Create(Duties d)
+        {
+            if (ModelState.IsValid)
+            {
+                if (idl.assign_duty(d))
+                {
+                    TempData["successMessage"] = "Duty assigned successfully!";
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Failed to assign duty. Please try again.");
+                }
+            }
+            return View(d);
+        }
+
+        // ✅ Search API for AJAX
+        public IActionResult Search(string search)
+        {
+            List<Duties> list;
+            if (string.IsNullOrEmpty(search))
+            {
+                list = idl.getduties();
+            }
+            else
+            {
+                list = idl.search(search);
+            }
+            return Json(list);
+        }
+
+        // ✅ Edit (status update)
+        [HttpPost]
+        public IActionResult Edit(Duties d)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var result = idl.Updatestatus(d);
+                    if (result)
+                    {
+                        TempData["successMessage"] = "Status updated successfully!";
+                    }
+                    else
+                    {
+                        TempData["errorMessage"] = "Failed to update status.";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["errorMessage"] = $"An error occurred: {ex.Message}";
+            }
+            return RedirectToAction(nameof(Index));
+        }
+    }
+}

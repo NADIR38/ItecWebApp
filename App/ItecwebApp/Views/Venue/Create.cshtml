@@ -1,0 +1,26 @@
+﻿@model Venues
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container mt-5">
+	<h1 class="text-primary" style="color:#112d40">Create Venue</h1>
+	<form asp-action="Create" method="post">
+		<div class="mb-3">
+			<label asp-for="name" class="form-label">Venue Name</label>
+			<input asp-for="name" class="form-control" required />
+			<span asp-validation-for="name" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="location" class="form-label">Address</label>
+			<input asp-for="location" class="form-control" required />
+			<span asp-validation-for="location" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="capacity" class="form-label">Capacity</label>
+			<input asp-for="capacity" type="number" class="form-control" required />
+			<span asp-validation-for="capacity" class="text-danger"></span>
+		</div>
+		<button type="submit" class="btn btn-success">Create Venue</button>
+
+	</form>
+</div>

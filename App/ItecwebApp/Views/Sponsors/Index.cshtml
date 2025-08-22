@@ -1,0 +1,204 @@
+﻿@model List<Sponsors>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h1 class="text-center mt-5 mb-4">Sponsors</h1>
+
+    <!-- Button to open modal -->
+    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#sponsorModal">
+        Add Sponsor
+    </button>
+    <div class="rounded-2 row-cols-2" style="padding:10px">
+<input type="text" name="search" value="" id="search"  placeholder="Search Sponsors"/>
+</div>
+  
+
+    <!-- Sponsors Table -->
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Sponsor Name</th>
+                <th>Contact No</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            @foreach (var sponsor in Model)
+            {
+                <tr>
+                    <td>@sponsor.SponsorName</td>
+                    <td>@sponsor.ContactNo</td>
+                    <td>
+                        <a href="javascript:void(0);"
+                           class="btn btn-warning btn-edit"
+                           data-id="@sponsor.SponsorId"
+                           data-name="@sponsor.SponsorName"
+                           data-contact="@sponsor.ContactNo">
+                            Edit
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="sponsorModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form asp-action="Create" method="post">
+                @Html.AntiForgeryToken()
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Sponsor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Sponsor Name</label>
+                        <input type="text" class="form-control" name="SponsorName" required />
+                        <span  class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Contact No</label>
+                        <input type="text" class="form-control" name="ContactNo" required />
+                        <span  class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <!-- ✅ must be submit -->
+                    <button type="submit" class="btn btn-success">Save</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="editSponsorModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form asp-action="Edit" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="SponsorId" id="editSponsorId" />
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Sponsor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Sponsor Name</label>
+                        <input type="text" class="form-control" name="SponsorName" id="editSponsorName" required />
+                        <span class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Contact No</label>
+                        <input type="text" class="form-control" name="ContactNo" id="editSponsorContact" required />
+                        <span class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-success">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        // Hide success message after 3 seconds
+        setTimeout(() => {
+            const msg = document.getElementById("successMessage");
+            if (msg) {
+                msg.style.transition = "opacity 0.5s ease";
+                msg.style.opacity = "0";
+                setTimeout(() => msg.remove(), 500); // remove after fade
+            }
+        }, 3000);
+     
+           
+
+        
+    </script>
+    <script>
+        const editSponsorModal = new bootstrap.Modal(document.getElementById('editSponsorModal'));
+
+        // function to bind edit buttons
+        function attachEditEvents() {
+            document.querySelectorAll('.btn-edit').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const id = this.getAttribute('data-id');
+                    const name = this.getAttribute('data-name');
+                    const contact = this.getAttribute('data-contact');
+
+                    document.getElementById('editSponsorId').value = id;
+                    document.getElementById('editSponsorName').value = name;
+                    document.getElementById('editSponsorContact').value = contact;
+
+                    editSponsorModal.show();
+                });
+            });
+        }
+
+        // run once at page load
+        attachEditEvents();
+
+        // live search
+        document.getElementById("search").addEventListener('input', function () {
+            let query = this.value.trim();
+
+            fetch(`/Sponsors/Search?SearchTerm=${encodeURIComponent(query)}`)
+                .then(response => response.json())
+                .then(data => {
+                    let tbody = document.getElementById("tbody");
+                    tbody.innerHTML = "";
+
+                    if (data.length === 0) {
+                        tbody.innerHTML = `<tr><td colspan="3" class="text-center">No Sponsors Found</td></tr>`;
+                    } else {
+                        data.forEach(sponsor => {
+                            let row = `
+                                <tr>
+                                    <td>${sponsor.sponsorName}</td>
+                                    <td>${sponsor.contactNo}</td>
+                                    <td>
+                                        <a href="javascript:void(0);"
+                                           class="btn btn-warning btn-edit"
+                                           data-id="${sponsor.sponsorId}"
+                                           data-name="${sponsor.sponsorName}"
+                                           data-contact="${sponsor.contactNo}">
+                                            Edit
+                                        </a>
+                                    </td>
+                                </tr>`;
+                            tbody.innerHTML += row;
+                        });
+                    }
+
+                    // reattach events to new buttons
+                    attachEditEvents();
+                })
+                .catch(err => alert("Error fetching sponsors:", err));
+        });
+    </script>
+
+
+}
+

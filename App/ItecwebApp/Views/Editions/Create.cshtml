@@ -1,0 +1,27 @@
+﻿@model Edition
+
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<form asp-action=Create method="post">
+
+	<div class="container mt-5">
+		<h2 class="text-primary" style="color:#112d40"> Create Edition</h2>
+		<div class="mb-3">
+			<label asp-for="Year" class="form-label">Edition Year</label>
+			<input asp-for="Year" class="form-control" required />
+			<span asp-validation-for="Year" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Description" class="form-label">Description</label>
+			<textarea asp-for="Description" class="form-control" required></textarea>
+			<span asp-validation-for="Description" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Theme" class="form-label">Theme</label>
+			<input asp-for="Theme" class="form-control" required />
+			<span asp-validation-for="Theme" class="text-danger"></span>
+		</div>
+		<button type="submit" class="btn btn-success">Create Edition</button>
+	</div>
+</form>

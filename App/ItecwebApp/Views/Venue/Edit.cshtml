@@ -1,0 +1,40 @@
+﻿@model Venues
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <form asp-action="Edit" method="post" id="form">
+        <h1 class="text-primary" style="color:#112d40">Edit Venue</h1>
+
+        <input type="hidden" asp-for="id" />
+
+        <label asp-for="name" class="form-label">Venue Name</label>
+        <input asp-for="name" class="form-control" />
+        <span asp-validation-for="name" class="text-danger"></span>
+
+        <label asp-for="location" class="form-label">Address</label>
+        <input asp-for="location" class="form-control" />
+        <span asp-validation-for="location" class="text-danger"></span>
+
+        <label asp-for="capacity" class="form-label">Capacity</label>
+        <input asp-for="capacity" type="number" class="form-control" />
+        <span asp-validation-for="capacity" class="text-danger"></span>
+
+        <button type="submit" class="btn btn-success mt-3" id="submit">Update Venue</button>
+        <button type="button" class="btn btn-secondary mt-3" id="cancel">Cancel</button>
+    </form>
+</div>
+
+<script>
+    const cancel = document.getElementById("cancel");
+    const form = document.getElementById("form");
+    const submit = document.getElementById("submit");
+
+    cancel.addEventListener("click", function () {
+        // Just navigate without submitting
+        window.location.href = '@Url.Action("Index", "Venue")';
+    });
+
+
+</script>

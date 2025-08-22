@@ -1,0 +1,184 @@
+﻿@model List<Events>
+@{
+    ViewData["Title"] = "Events";
+	Layout="~/Views/Shared/_Layout.cshtml";
+}
+
+    <h2 class="text-center">Events</h2>
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success" id="message">@TempData["Message"]</div>
+}
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger" id="error">@TempData["Error"]</div>
+}
+<a asp-action="Create" class="btn btn-primary mb-3">➕ Add New Event</a>
+<div class="tale-wrapper">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Venue</th>
+                <th>Year</th>
+                <th>Committee</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.event_name</td>
+                    <td>@item.event_date.ToShortDateString()</td>
+                    <td>@item.venue_name</td>
+                    <td>@item.year</td>
+                    <td>@item.committee_name</td>
+                 
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+    <!-- Edit Modal -->
+    <div class="modal" id="editModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Event</h5>
+                    <button type="button" class="btn-close" onclick="closeEditModal()"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="editEventId" />
+
+                    <div class="mb-2">
+                        <label>Name</label>
+                        <input class="form-control" id="editEventName" />
+                    </div>
+                    <div class="mb-2">
+                        <label>Date</label>
+                        <input type="date" class="form-control" id="editEventDate" />
+                    </div>
+                    <div class="mb-2">
+                        <label>Venue</label>
+                        <input class="form-control" id="editVenue" />
+                    </div>
+                    <div class="mb-2">
+                        <label>Year</label>
+                        <input class="form-control" id="editYear" />
+                    </div>
+                    <div class="mb-2">
+                        <label>Committee</label>
+                        <input class="form-control" id="editCommittee" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success" onclick="saveEventChanges()">Save</button>
+                    <button class="btn btn-secondary" onclick="closeEditModal()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+@section scripts{
+    <script>
+       function openEditModal(id) {
+            fetch(`/Events/GetEventById/${id}`)
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById("editEventId").value = data.event_id;
+                    document.getElementById("editEventName").value = data.event_name;
+                    document.getElementById("editEventDate").value = data.event_date.split('T')[0];
+                    document.getElementById("editVenue").value = data.venue_name;
+                    document.getElementById("editYear").value = data.year;
+                    document.getElementById("editCommittee").value = data.committee_name;
+
+                    document.getElementById("editModal").style.display = "block";
+                });
+        }
+
+        function closeEditModal() {
+            document.getElementById("editModal").style.display = "none";
+        }
+
+        // Save changes
+        function saveEventChanges() {
+            const data = {
+                event_id: document.getElementById("editEventId").value,
+                event_name: document.getElementById("editEventName").value,
+                event_date: document.getElementById("editEventDate").value,
+                venue_name: document.getElementById("editVenue").value,
+                year: document.getElementById("editYear").value,
+                committee_name: document.getElementById("editCommittee").value
+            };
+
+            fetch(`/Events/UpdateEvent`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            })
+            .then(res => {
+                if (res.ok) {
+                    location.reload();
+                } else {
+                    alert("Update failed");
+                }
+            });
+        }
+
+        // Delete event
+        function deleteEvent(id) {
+            if (!confirm("Are you sure?")) return;
+            fetch(`/Events/Delete/${id}`, { method: 'POST' })
+                .then(res => {
+                    if (res.ok) location.reload();
+                    else alert("Delete failed");
+                });
+        }
+    </script>
+<script>
+        
+          document.getElementById("search").addEventListener("input", function () {
+              let query = this.value.trim();
+
+              // ✅ If search is empty → show all events again
+              if (query === "") {
+                  fetch(`/Events/SearchEvents?searchTerm=`)
+                      .then(res => res.json())
+                      .then(data => renderTable(data));
+                  return;
+              }
+
+              // ✅ Otherwise → show filtered events
+              fetch(`/Events/SearchEvents?searchTerm=${encodeURIComponent(query)}`)
+                  .then(res => res.json())
+                  .then(data => renderTable(data));
+          });
+
+          function renderTable(data) {
+              let tbody = document.getElementById("tbody");
+              tbody.innerHTML = "";
+
+              if (data.length === 0) {
+                  tbody.innerHTML = `<tr><td colspan="7" class="text-center text-muted">No events found</td></tr>`;
+                  return;
+              }
+
+              data.forEach(eventItem => {
+                  const date = new Date(eventItem.event_date).toISOString().split('T')[0];
+                  let row = `
+                      <tr>
+                          <td>${eventItem.event_name}</td>
+                          <td>${date}</td>
+                          <td>${eventItem.venue_name}</td>
+                          <td>${eventItem.year}</td>
+                          <td>${eventItem.committee_name}</td>
+                          <td>${eventItem.assigned_time}</td>
+
+                      </tr>`;
+                  tbody.innerHTML += row;
+              });
+          }
+    </script>
+
+}

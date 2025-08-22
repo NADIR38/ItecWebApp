@@ -1,0 +1,165 @@
+﻿@model Events
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    #venue, #cooms-div {
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        max-height: 200px;
+        overflow-y: auto;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+        #venue label, #cooms-div label {
+            display: block;
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+            #venue label:hover, #cooms-div label:hover {
+                background-color: #18a144;
+                color: #fff;
+            }
+</style>
+
+<div class="container">
+    <h2>Create Event</h2>
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+    }
+    <form asp-action="Create" method="post" id="form">
+        <div class="form-group">
+            <label asp-for="event_name" class="control-label"></label>
+            <input asp-for="event_name" class="form-control" />
+            <span asp-validation-for="event_name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="event_date" class="control-label"></label>
+            <input asp-for="event_date" type="date" class="form-control" />
+            <span asp-validation-for="event_date" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="venue_name" class="control-label">Venue Name</label>
+            <input asp-for="venue_name" class="form-control" id="venue_name" autocomplete="off" />
+            <div id="venue"></div>
+            <span asp-validation-for="venue_name" class="text-danger"></span>
+            <a asp-action="Create" asp-controller="Venue" class="btn btn-primary">Add Venue</a>
+        </div>
+       <div class="form-group">
+           <label asp-for="event_description" class="control-label">Description</label>
+           <textarea asp-for="event_description" class="form-control" rows="4"></textarea>
+			<span asp-validation-for="event_description" class="text-danger"></span>
+       </div>
+        <div class="form-group">
+            <label asp-for="committee_name" class="control-label">Committee Name</label>
+            <input asp-for="committee_name" class="form-control" id="comm_name" autocomplete="off" />
+            <div id="cooms-div"></div>
+            <span asp-validation-for="committee_name" class="text-danger"></span>
+            <a asp-action="Create" asp-controller="Committee" class="btn btn-primary">Add Committee</a>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="assigned_time" class="control-label"></label>
+            <input asp-for="assigned_time" type="time" class="form-control" />
+            <span asp-validation-for="assigned_time" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="year" class="control-label"></label>
+            <input asp-for="year" type="text" class="form-control" />
+            <span asp-validation-for="year" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="category_name" class="control-label">Category</label>
+            <input asp-for="category_name" class="form-control" list="categoryList" id="categoryInput" autocomplete="off" />
+            <datalist id="categoryList">
+                <!-- Options will be filled dynamically -->
+            </datalist>
+            <span asp-validation-for="category_name" class="text-danger"></span>
+        </div>
+
+
+        <button type="submit" class="btn btn-success">Create Event</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+
+    </form>
+</div>
+
+<script>
+    // Venue autocomplete
+    const venueInput = document.getElementById("venue_name");
+    const venueDiv = document.getElementById("venue");
+    venueInput.addEventListener("input", function () {
+        const query = venueInput.value.trim();
+        venueDiv.innerHTML = "";
+
+        if (query.length > 0) {
+            fetch(`/Events/SearchVenues?searchTerm=${encodeURIComponent(query)}`)
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(venue => {
+                        const label = document.createElement("label");
+                        label.textContent = venue.name;
+                        label.onclick = function () {
+                            venueInput.value = venue.name;
+                            venueDiv.innerHTML = "";
+                        };
+                        venueDiv.appendChild(label);
+                    });
+                });
+        }
+    });
+
+
+    // Committee autocomplete
+    const commInput = document.getElementById("comm_name");
+    const commDiv = document.getElementById("cooms-div");
+
+      commInput.addEventListener("input", function () {
+        const query = commInput.value.trim();
+        commDiv.innerHTML = "";
+
+        if (query.length > 0) {
+            fetch(`/Events/SearchCommittees?term=${encodeURIComponent(query)}`)
+                .then(res => res.json())
+                .then(data => {
+                    data.forEach(comm => {
+                        const label = document.createElement("label");
+                        label.textContent = comm.name;
+                        label.onclick = function () {
+                            commInput.value = comm.name;
+                            commDiv.innerHTML = "";
+                        };
+                        commDiv.appendChild(label);
+                    });
+                });
+        }
+    });
+        // Load categories into dropdown
+    const categoryInput = document.getElementById("categoryInput");
+    const categoryList = document.getElementById("categoryList");
+
+    fetch('/Events/SearchCategories')
+        .then(res => res.json())
+        .then(data => {
+            data.forEach(cat => {
+                const option = document.createElement("option");
+                option.value = cat.name; // value shown in suggestions
+                categoryList.appendChild(option);
+            });
+        })
+        .catch(err => console.error("Error loading categories:", err));
+
+
+</script>

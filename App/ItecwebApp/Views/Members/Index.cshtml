@@ -1,0 +1,174 @@
+﻿@model List<CommitteMemeber>
+@{
+
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	
+}
+<div class="container">
+	<div >
+		<h2 class="text-center">Committee Members</h2>
+		<button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#Create">Add Member</button>
+		<input type="text" id="search" class="form-control mb-3" placeholder="Search members..." />
+		@if (TempData["Successmessage"] != null)
+		{
+			<div class="alert alert-success" id="successMessage">@TempData["Successmessage"]</div>
+		}
+		@if (TempData["Errormessage"] != null)
+		{
+			<div class="alert alert-danger" id="errorMessage">@TempData["Errormessage"]</div>
+		}
+		<div class="table-wrapper">
+			<table class="table table-bordered table-striped  ">
+				<thead>
+					<tr>
+						<th>Member Name</th>
+						<th>Committee Name</th>
+						<th>Designation</th>
+						<th>Actions</th>   <!-- New -->
+					</tr>
+				</thead>
+				<tbody id="memberTableBody">
+					@foreach (var member in Model)
+					{
+						<tr>
+							<td>@member.name.ToUpper()</td>
+							<td>@member.CommiteeName.ToUpper()</td>
+							<td>@member.role_name.ToUpper()</td>
+							<td>
+								<a asp-controller="Duties"
+								   asp-action="Create"
+								   asp-route-name="@member.name"
+								   asp-route-committeename="@member.CommiteeName"
+								   class="btn btn-sm btn-success">
+									Assign Duty
+								</a>
+							</td>
+						</tr>
+					}
+				</tbody>
+
+			</table>
+		</div>
+
+	</div>
+</div>
+<div class="modal" tabindex="-1" id="Create">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Add Members</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form asp-action="Create" method="post">
+					@Html.AntiForgeryToken()
+					<div class="row mb-3">
+						<label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Name</label>
+						<div class="col-sm-10">
+							<input type="text" name="Name" class="form-control form-control-sm" id="name" placeholder="Enter Member Name" required>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<label for="colFormLabel" class="col-sm-2 col-form-label">Role</label>
+						<div class="col-sm-10">
+							<select name="role_name" class="form-control" required>
+								<option value="Faculty Advisor">Faculty Advisor</option>
+								<option value="Student Lead">Student Lead</option>
+								<option value="Volunteer">Volunteer</option>
+							</select>
+
+						</div>
+					</div>
+					<div class="row mb-3">
+						<label for="colFormLabel" class="col-sm-2 col-form-label">Committee Name</label>
+						<div class="col-sm-10">
+							<input type="text" name="CommiteeName" class="form-control" id="cname" placeholder="Enter Committeename" required>
+							<div id="cooms-div"></div>
+							<a asp-action="Create" asp-controller="Committee" class="btn btn-primary">Add Committee</a>
+
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-primary">Save </button>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+<script>
+	document.getElementById('search').addEventListener('input',function(){
+		let query=this.value.trim();
+
+		fetch(`/Members/Search?searchTerm=${encodeURIComponent(query)}`)
+		.then(res=>res.json())
+		.then(data=>{
+			let tbody = document.getElementById("memberTableBody");
+							tbody.innerHTML = "";
+			if(data.length===0){
+				document.getElementById('memberTableBody').innerHTML='<tr><td colspan="4" class="text-center">No Members  found</td></tr>';
+				return;
+			}
+		data.forEach(vendor => {
+		let row = `
+			<tr>
+				<td>${vendor.name.toUpperCase()}</td>
+				<td>${vendor.commiteeName.toUpperCase()}</td>
+				<td>${vendor.role_name.toUpperCase()}</td>
+				<td>
+					<a href="/Duties/Create?name=${encodeURIComponent(vendor.name)}&committeename=${encodeURIComponent(vendor.commiteeName)}"
+					   class="btn btn-sm btn-success">
+					   Assign Duty
+					</a>
+				</td>
+			</tr>`;
+		tbody.innerHTML += row;
+	});
+
+
+
+		})
+	});
+		setTimeout(() => {
+			const msg = document.getElementById("successMessage");
+			if (msg) {
+				msg.style.transition = "opacity 0.5s ease";
+				msg.style.opacity = "0";
+				setTimeout(() => msg.remove(), 500); // remove after fade
+			}
+		}, 3000);
+		setTimeout(() => {
+			const msg = document.getElementById("errorMessage");
+			if (msg) {
+				msg.style.transition = "opacity 0.5s ease";
+				msg.style.opacity = "0";
+				setTimeout(() => msg.remove(), 500); // remove after fade
+			}
+		}, 3000);
+		const cname = document.getElementById("cname");
+	const coomDiv = document.getElementById("cooms-div");
+
+	cname.addEventListener("input", function () {
+		const query = cname.value.trim();
+		coomDiv.innerHTML = "";
+
+		if (query.length > 0) {
+			fetch(`/Members/SearchCommittees?term=${encodeURIComponent(query)}`)
+				.then(response => response.json())
+				.then(data => {
+					data.forEach(committee => {
+						const label = document.createElement("label");
+						label.textContent = committee.name; // ✅ use committee not comm
+						label.onclick = function () {
+							cname.value = committee.name; // ✅ put value in input box
+							coomDiv.innerHTML = "";
+						};
+						coomDiv.appendChild(label);
+					});
+				});
+		}
+	});
+
+</script>

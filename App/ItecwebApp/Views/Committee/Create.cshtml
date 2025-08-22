@@ -1,0 +1,71 @@
+﻿@model Commitees
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h3>Committees</h3>
+    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#committeeModal">
+        Add Committee
+    </button>
+
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="committeeModal" tabindex="-1" aria-labelledby="committeeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="committeeModalLabel">Add Committee</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="committeeForm">
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label">Committee Name</label>
+                            <input asp-for="Name" class="form-control" required />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="year" class="form-label">Year</label>
+                            <input asp-for="year" class="form-control" />
+                            <span asp-validation-for="year" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add Committee</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#committeeForm').submit(function (e) {
+                e.preventDefault(); // Prevent normal form submission
+
+                var form = $(this);
+                var data = form.serialize();
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("Create", "Committee")',
+                    data: data,
+                    success: function (response) {
+                        // Check if TempData SuccessMessage was returned
+                        if ($(response).find('#SuccessMessage').length) {
+                            alert("Committee added successfully!");
+                            $('#committeeModal').modal('hide'); // Close modal
+                            // Optionally refresh the committee list via AJAX
+                        } else {
+                            // Show validation errors in modal
+                            $('#committeeModal .modal-body').html(response);
+                        }
+                    },
+                    error: function () {
+                        alert("Error adding committee. Please try again.");
+                    }
+                });
+            });
+        });
+    </script>
+}

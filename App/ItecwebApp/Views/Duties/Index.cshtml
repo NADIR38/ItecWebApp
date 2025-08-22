@@ -1,0 +1,152 @@
+﻿@model List<Duties>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h2 class="text-center">Duties</h2>
+    <input type="text" id="search" class="form-control mb-3" placeholder="Search Duties..." />
+
+    @if (TempData["successMessage"] != null)
+    {
+        <div class="alert alert-success" id="successMessage">@TempData["successMessage"]</div>
+    }
+    @if (TempData["errorMessage"] != null)
+    {
+        <div class="alert alert-danger" id="errorMessage">@TempData["errorMessage"]</div>
+    }
+
+    <div class="table-wrapper">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Assigned To</th>
+                    <th>Committee Name</th>
+                    <th>Description</th>
+                    <th>Deadline</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="dutyTableBody">
+                @foreach (var duty in Model)
+                {
+                    <tr>
+                        <td>@duty.name.ToUpper()</td>
+                        <td>@duty.committee_name.ToUpper()</td>
+                        <td>@duty.description.ToUpper()</td>
+                        <td>@duty.Deadline.ToShortDateString()</td>
+                        <td>@duty.status.ToUpper()</td>
+                        <td>
+                            <!-- ✅ button instead of <a href="#"> -->
+                            <button type="button" class="btn btn-warning btn_edit"
+                                    data-id="@duty.duty_id"
+                                    data-status="@duty.status">
+                                Edit
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- ✅ Bootstrap 5 Modal -->
+<div class="modal fade" id="edit" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Duty Status</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="Edit" method="post">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="duty_id" id="duty_id" />
+
+                    <div class="row mb-3">
+                        <label class="col-sm-3 col-form-label">Status</label>
+                        <div class="col-sm-9">
+                            <select name="status" id="duty_status" class="form-control" required>
+                                <option value="">-- Select Status --</option>
+                                <option value="Pending">Pending</option>
+                                <option value="In Progress">In Progress</option>
+                                <option value="Completed">Completed</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // ✅ Auto-hide messages
+        setTimeout(() => { $("#successMessage").fadeOut(); }, 3000);
+        setTimeout(() => { $("#errorMessage").fadeOut(); }, 3000);
+
+        // ✅ Bootstrap modal instance
+        const editModal = new bootstrap.Modal(document.getElementById('edit'));
+
+        // ✅ Bind Edit buttons
+        function bindEditButtons() {
+            document.querySelectorAll('.btn_edit').forEach(button => {
+                button.addEventListener('click', function () {
+                    const id = this.getAttribute('data-id');
+                    const status = this.getAttribute('data-status');
+
+                    document.getElementById('duty_id').value = id;
+                    document.getElementById('duty_status').value = status;
+
+                    editModal.show();
+                });
+            });
+        }
+        bindEditButtons();
+
+        // ✅ AJAX search
+        document.getElementById('search').addEventListener('input', function () {
+            let query = this.value.trim();
+
+            fetch(`/Duties/Search?search=${encodeURIComponent(query)}`)
+                .then(res => res.json())
+                .then(data => {
+                    let tbody = document.getElementById("dutyTableBody");
+                    tbody.innerHTML = "";
+
+                    if (data.length === 0) {
+                        tbody.innerHTML = '<tr><td colspan="6" class="text-center">No duties found</td></tr>';
+                        return;
+                    }
+
+                    data.forEach(duty => {
+                        let row = `
+                            <tr>
+                                <td>${duty.name.toUpperCase()}</td>
+                                <td>${duty.committee_name.toUpperCase()}</td>
+                                <td>${duty.description.toUpperCase()}</td>
+                                <td>${new Date(duty.deadline).toLocaleDateString()}</td>
+                                <td>${duty.status.toUpperCase()}</td>
+                                <td>
+                                    <button type="button" class="btn btn-warning btn_edit"
+                                            data-id="${duty.duty_id}"
+                                            data-status="${duty.status}">
+                                        Edit
+                                    </button>
+                                </td>
+                            </tr>`;
+                        tbody.innerHTML += row;
+                    });
+
+                    bindEditButtons(); // ✅ rebind after refresh
+                });
+        });
+    </script>
+}

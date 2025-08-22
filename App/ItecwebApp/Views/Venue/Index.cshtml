@@ -1,0 +1,86 @@
+﻿@model List<Venues>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h3>Venues</h3>
+    <a asp-action="Create" class="btn btn-primary mb-3">Add Venue</a>
+
+    <input type="text" id="searchBox" class="form-control mb-3" placeholder="Search venues..." />
+
+    <div class="table-wrapper">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Venue Name</th>
+                    <th>Address</th>
+                    <th>Capacity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="venueTableBody">
+                @foreach (var venue in Model)
+                {
+                    <tr>
+                        <td>@venue.name.ToUpper()</td>
+                        <td>@venue.location.ToUpper()</td>
+                        <td>@venue.capacity</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@venue.id" class="btn btn-warning">Edit</a>
+                            <a asp-action="Delete" asp-route-id="@venue.id" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@{
+    var successMessage = TempData["SuccessMessage"] as string;
+}
+@if (!string.IsNullOrEmpty(successMessage))
+{
+    <script>
+        alert('@successMessage');
+    </script>
+}
+
+<script>
+    document.getElementById("searchBox").addEventListener("input", function () {
+        let query = this.value.trim();
+
+        fetch(`/Venue/Search?term=${encodeURIComponent(query)}`)
+            .then(response => response.json())
+            .then(data => {
+                let tbody = document.getElementById("venueTableBody");
+                tbody.innerHTML = "";
+
+                if (data.length === 0) {
+                    tbody.innerHTML = `
+                        <tr>
+                            <td colspan="4" class="text-center text-muted">No venues found</td>
+                        </tr>
+                    `;
+                    return;
+                }
+
+                data.forEach(venue => {
+                    let row = `
+                        <tr>
+                            <td>${venue.name.toUpperCase()}</td>
+                            <td>${venue.location.toUpperCase()}</td>
+                            <td>${venue.capacity}</td>
+                            <td>
+                                <a href="/Venue/Edit/${venue.id}" class="btn btn-warning">Edit</a>
+                                <a href="/Venue/Delete/${venue.id}" class="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    `;
+                    tbody.innerHTML += row;
+                });
+            });
+    });
+
+</script>

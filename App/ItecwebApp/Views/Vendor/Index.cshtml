@@ -1,0 +1,196 @@
+﻿@model List<Vendors>
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+	<h2 class="text-xl-center">Vendors</h2>
+	<button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#Create">Add Vendor</button>
+	<input type="text" id="search" class="form-control mb-3" placeholder="Search vendors..." />
+	@if (TempData["SuccessMessage"] != null)
+	{
+		<div class="alert alert-success" id="successMessage">@TempData["SuccessMessage"]</div>
+	}
+	@if (TempData["ErrorMessage"] != null)
+	{
+		<div class="alert alert-danger" id="errorMessage">@TempData["ErrorMessage"]</div>
+	}
+	<div class="table-wrapper">
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>Vendor Name</th>
+					<th>Contact</th>
+					<th>Service Type</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody id="vendorTableBody">
+				@foreach (var vendor in Model)
+				{
+					<tr>
+						<td>@vendor.Name.ToUpper()</td>
+						<td>@vendor.ContactPerson.ToUpper()</td>
+						<td>@vendor.ServiceType.ToUpper()</td>
+						<td>
+							<a href="#"  class="btn btn-warning btn_edit" data-id="@vendor.Id" data-name="@vendor.Name" data-contact="@vendor.ContactPerson" data-service="@vendor.ServiceType" >Edit</a>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+
+</div>
+<div class="modal" tabindex="-1" id="Create">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Add Vendors</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form asp-action="Create" method="post">
+					@Html.AntiForgeryToken()
+					<div class="row mb-3">
+						<label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm"  >Name</label>
+						<div class="col-sm-10">
+							<input type="text" name="Name" class="form-control form-control-sm" id="name" placeholder="Enter Vendor Name" required>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<label for="colFormLabel" class="col-sm-2 col-form-label">Contact</label>
+						<div class="col-sm-10">
+							<input type="tel"  name="ContactPerson" class="form-control" id="colFormLabel" placeholder="Enter Contact Number" required>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<label for="colFormLabel" class="col-sm-2 col-form-label">Service Type</label>
+						<div class="col-sm-10">
+							<input type="text" name="ServiceType" class="form-control" id="service" placeholder="Enter Service Type" required>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-success">Save </button>
+					</div>
+				</form>
+			</div>
+		
+		</div>
+	</div>
+</div>
+<div class="modal" tabindex="-1" id="edit">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Edit Details</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form asp-action="Edit" method="post">
+					@Html.AntiForgeryToken()
+					<input type="hidden" name="Id" id="vendor_id" />
+					<div class="row mb-3">
+						<label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Name</label>
+						<div class="col-sm-10">
+							<input type="text" name="Name" class="form-control form-control-sm" id="vname" placeholder="Enter Vendor Name" required>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<label for="colFormLabel" class="col-sm-2 col-form-label">Contact</label>
+						<div class="col-sm-10">
+							<input type="tel" name="ContactPerson" class="form-control" id="econtact" placeholder="Enter Contact Number" required>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<label for="colFormLabel" class="col-sm-2 col-form-label">Service Type</label>
+						<div class="col-sm-10">
+							<input type="text" name="ServiceType" class="form-control" id="eservice" placeholder="Enter Service Type" required>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-success">Save </button>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+	<script>
+		// Hide success message after 3 seconds
+		setTimeout(() => {
+			const msg = document.getElementById("successMessage");
+			if (msg) {
+				msg.style.transition = "opacity 0.5s ease";
+				msg.style.opacity = "0";
+				setTimeout(() => msg.remove(), 500); // remove after fade
+			}
+		}, 3000);
+
+
+
+
+	</script>
+	<script>
+		const editmodal = new bootstrap.Modal(document.getElementById('edit'));
+		function bindEditButtons() {
+			const editButtons = document.querySelectorAll('.btn_edit');
+			editButtons.forEach(button => {
+				button.addEventListener('click', function () {
+					const id = this.getAttribute('data-id');
+					const name = this.getAttribute('data-name');
+					const contact = this.getAttribute('data-contact');
+					const service = this.getAttribute('data-service');
+					document.getElementById('vname').value = name;
+					document.getElementById('econtact').value = contact;
+					document.getElementById('eservice').value = service;
+					document.getElementById('vendor_id').value = id;
+					editmodal.show();
+				});
+			});
+		}
+		bindEditButtons();
+		document.getElementById('search').addEventListener('input',function(){
+			let query=this.value.trim();
+
+			fetch(`/Vendor/Search?search=${encodeURIComponent(query)}`)
+			.then(res=>res.json())
+			.then(data=>{
+				let tbody = document.getElementById("vendorTableBody");
+								tbody.innerHTML = "";
+				if(data.length===0){
+					document.getElementById('vendorTableBody').innerHTML='<tr><td colspan="4" class="text-center">No vendors found</td></tr>';
+					return;
+				}
+					data.forEach(vendor => {
+			let row = `
+				<tr>
+					<td>${vendor.name.toUpperCase()}</td>
+					<td>${vendor.contactPerson.toUpperCase()}</td>
+					<td>${vendor.serviceType.toUpperCase()}</td>
+					<td>
+						<a href="#" class="btn btn-warning btn_edit"
+						   data-id="${vendor.id}"
+						   data-name="${vendor.name}"
+						   data-contact="${vendor.contactPerson}"
+						   data-service="${vendor.serviceType}">
+						   Edit
+						</a>
+					</td>
+				</tr>`;
+			tbody.innerHTML += row;
+		});
+
+								bindEditButtons();
+
+			})
+		});
+
+	</script>
+}

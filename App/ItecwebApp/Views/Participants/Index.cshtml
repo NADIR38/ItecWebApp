@@ -1,0 +1,145 @@
+﻿@model List<Participants>
+@{
+    Layout = "_Layout";
+}
+<div class="container">
+    <h1>Participants</h1>
+    <p>Manage the participants of the event.</p>
+
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success" id="message">@TempData["Message"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger" id="error">@TempData["Error"]</div>
+    }
+
+    <a asp-action="Add" class="btn btn-primary mb-3">➕ Add New Participant</a>
+    <input type="text" id="search" class="form-control mb-3" placeholder="Search Participants..." />
+
+    <!-- Add the anti-forgery token -->
+    @Html.AntiForgeryToken()
+    <div class="table-wrapper">
+
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Event</th>
+                <th>Payment Status</th>
+                <th>Phone</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="body">
+            @foreach (var participant in Model)
+            {
+                <tr>
+                    <td>@participant.Id</td>
+                    <td>@participant.Name</td>
+                    <td>@participant.event_name</td>
+                    <td>@participant.payment_status</td>
+                    <td>@participant.phone</td>
+                    <td>@participant.role</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@participant.Id" class="btn btn-primary btn-sm">Edit</a>
+                        <form asp-action="Delete" asp-route-id="@participant.Id" method="post" style="display:inline;">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+</div>
+
+<script>
+    // Auto-hide messages
+    setTimeout(() => {
+        const msg = document.getElementById("message");
+        if (msg) {
+            msg.style.transition = "opacity 0.5s ease";
+            msg.style.opacity = "0";
+            setTimeout(() => msg.remove(), 500);
+        }
+    }, 3000);
+
+    setTimeout(() => {
+        const msg = document.getElementById("error");
+        if (msg) {
+            msg.style.transition = "opacity 0.5s ease";
+            msg.style.opacity = "0";
+            setTimeout(() => msg.remove(), 500);
+        }
+    }, 3000);
+
+    document.getElementById("search").addEventListener("input", function () {
+        let query = this.value.trim();
+
+        // Add loading indicator (optional)
+        let tbody = document.getElementById("body");
+
+        fetch(`/Participants/Search?searchTerm=${encodeURIComponent(query)}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Search results:', data); // Debug log
+
+                tbody.innerHTML = ""; // Clear existing rows
+
+                // Get the anti-forgery token
+                let tokenInput = document.querySelector('input[name="__RequestVerificationToken"]');
+                let token = tokenInput ? tokenInput.value : '';
+
+                if (data && data.length > 0) {
+                    data.forEach(participant => {
+                        let row = document.createElement("tr");
+
+                        // Handle both PascalCase and camelCase property names
+                        let id = participant.Id || participant.id;
+                        let name = participant.Name || participant.name;
+                        let email = participant.Email || participant.email;
+                        let eventName = participant.event_name || participant.Event_Name;
+                        let paymentStatus = participant.payment_status || participant.Payment_Status;
+                        let phone = participant.phone || participant.Phone || '';
+                        let institute = participant.institute || participant.Institute || '';
+                        let role = participant.role || participant.Role || '';
+
+                        row.innerHTML = `
+                            <td>${id}</td>
+                            <td>${name}</td>
+                            <td>${eventName}</td>
+                            <td>${paymentStatus}</td>
+                            <td>${phone}</td>
+                            <td>${role}</td>
+                            <td>
+                                <a href="/Participants/Edit/${id}" class="btn btn-primary btn-sm">Edit</a>
+                                <form action="/Participants/Delete/${id}" method="post" style="display:inline;">
+                                    <input type="hidden" name="__RequestVerificationToken" value="${token}" />
+                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                            </td>`;
+                        tbody.appendChild(row);
+                    });
+                } else {
+                    // Show "No results found" message
+                    let row = document.createElement("tr");
+                    row.innerHTML = `<td colspan="9" class="text-center">No participants found.</td>`;
+                    tbody.appendChild(row);
+                }
+            })
+            .catch(error => {
+                console.error('Search error:', error);
+                tbody.innerHTML = `<tr><td colspan="9" class="text-center text-danger">Error loading search results: ${error.message}</td></tr>`;
+            });
+    });
+</script>
