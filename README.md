@@ -32,6 +32,14 @@ This system helps in **event organization, participant registration, role assign
 
 ---
 
+⚙️ Installation & Setup
+git clone https://github.com/YOUR-USERNAME/itecwebapp.git
+cd itecwebapp
+"ConnectionStrings": {
+  "DefaultConnection": "server=localhost;database=itecwebapp;user=root;password=yourpassword;"
+}
+dotnet run
+
 ## 📂 Project Structure  
 
 ```bash
@@ -46,3 +54,4 @@ itecwebapp/
 ├── Views/            # Razor Views (UI)
 ├── wwwroot/          # Static files (CSS, JS, Images)
 └── appsettings.json  # Database connection & config
+...
