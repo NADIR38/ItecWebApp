@@ -13,7 +13,9 @@
     {
         <div class="alert alert-danger" id="error">@TempData["Error"]</div>
 }
-<a asp-action="Create" class="btn btn-primary mb-3">➕ Add New Event</a>
+@if (User.IsInRole("Admin"))
+{
+    <a asp-action="Create" class="btn btn-primary mb-3">➕ Add New Event</a>}
 <div class="tale-wrapper">
     <table class="table table-bordered table-striped">
         <thead>

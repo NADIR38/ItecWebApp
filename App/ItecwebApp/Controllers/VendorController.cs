@@ -1,9 +1,12 @@
 ﻿using ItecwebApp.Interfaces;
 using ItecwebApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ItecwebApp.Controllers
 {
+    [Authorize(Roles = "Admin")]
+
     public class VendorController : Controller
     {
         private readonly IVendorsDAl idl;

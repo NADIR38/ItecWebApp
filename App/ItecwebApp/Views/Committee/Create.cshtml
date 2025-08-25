@@ -5,10 +5,12 @@
 
 <div class="container mt-5">
     <h3>Committees</h3>
-    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#committeeModal">
-        Add Committee
-    </button>
-
+    @if (User.IsInRole("Admin"))
+    {
+        <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#committeeModal">
+            Add Committee
+        </button>
+    }
     <!-- Bootstrap Modal -->
     <div class="modal fade" id="committeeModal" tabindex="-1" aria-labelledby="committeeModalLabel" aria-hidden="true">
         <div class="modal-dialog">

@@ -1,8 +1,10 @@
 ﻿using ItecwebApp.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ItecwebApp.Controllers
 {
+    [Authorize]
     public class EditionsController : Controller
     {
         private readonly IEditionDAl _editionDAl;
@@ -17,11 +19,15 @@ namespace ItecwebApp.Controllers
             return View(list);
         }
         [HttpGet]
+        [Authorize(Roles = "Admin")]
+
         public IActionResult Create()
         {
             return View();
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
+
         public IActionResult Create(Models.Edition edition)
         {
             try

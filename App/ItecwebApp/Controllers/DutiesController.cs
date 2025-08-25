@@ -1,9 +1,11 @@
 ﻿using ItecwebApp.Interfaces;
 using ItecwebApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ItecwebApp.Controllers
 {
+    [Authorize]
     public class DutiesController : Controller
     {
         private readonly IDutiesDAl idl;
@@ -19,6 +21,7 @@ namespace ItecwebApp.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin,Faculty")]
         public IActionResult Create(string name, string committeename)
         {
             var model = new Duties
@@ -30,6 +33,8 @@ namespace ItecwebApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles ="Admin,Faculty")]
         public IActionResult Create(Duties d)
         {
             if (ModelState.IsValid)
@@ -64,6 +69,9 @@ namespace ItecwebApp.Controllers
 
         // ✅ Edit (status update)
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,Faculty")]
+
         public IActionResult Edit(Duties d)
         {
             try

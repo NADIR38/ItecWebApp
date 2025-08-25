@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projects\\Sample projects\\ItecwebApp\\ItecwebApp.csproj": {}
+    "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\ItecwebApp.csproj": {}
   },
   "projects": {
-    "D:\\projects\\Sample projects\\ItecwebApp\\ItecwebApp.csproj": {
+    "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\ItecwebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\Sample projects\\ItecwebApp\\ItecwebApp.csproj",
+        "projectUniqueName": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\ItecwebApp.csproj",
         "projectName": "ItecwebApp",
-        "projectPath": "D:\\projects\\Sample projects\\ItecwebApp\\ItecwebApp.csproj",
+        "projectPath": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\ItecwebApp.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\Sample projects\\ItecwebApp\\obj\\",
+        "outputPath": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -51,6 +51,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[8.0.7, )"

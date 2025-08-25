@@ -1,9 +1,11 @@
 ﻿using ItecwebApp.DAL;
 using Microsoft.AspNetCore.Mvc;
 using ItecwebApp.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ItecwebApp.Controllers
 {
+    [Authorize]
     public class EventsController : Controller
     {
         private readonly IEventsDAll idl;
@@ -21,12 +23,16 @@ namespace ItecwebApp.Controllers
 
         // -------------------- CREATE --------------------
         [HttpGet]
+        [Authorize(Roles = "Admin")]
+
         public IActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
+
         public IActionResult Create(Events e)
         {
             if (ModelState.IsValid)
@@ -39,6 +45,8 @@ namespace ItecwebApp.Controllers
 
         // -------------------- GET EVENT BY ID --------------------
         [HttpGet]
+        [Authorize(Roles = "Admin")]
+
         public IActionResult GetEventById(int id)
         {
             var ev = idl.GetEvents().FirstOrDefault(x => x.event_id == id);
@@ -48,6 +56,8 @@ namespace ItecwebApp.Controllers
 
         // -------------------- UPDATE EVENT --------------------
         [HttpPost]
+        [Authorize(Roles = "Admin")]
+
         public IActionResult UpdateEvent([FromBody] Events e)
         {
             if (!ModelState.IsValid) return BadRequest("Invalid data");
@@ -65,22 +75,25 @@ namespace ItecwebApp.Controllers
         //    if (result) return Ok();
         //    return BadRequest("Delete failed");
         //}
-    
 
 
 
-public IActionResult SearchVenues(string searchTerm)
+        [Authorize(Roles = "Admin")]
+
+        public IActionResult SearchVenues(string searchTerm)
         {
             var venues = DatabaseHelper.getvenuenames(searchTerm) ?? new List<string>();
             // Return JSON array of objects with name property
             return Json(venues.Select(v => new { name = v }));
         }
+        [Authorize(Roles = "Admin")]
 
         public IActionResult SearchCommittees(string term)
         {
             var commitees = DatabaseHelper.getcommittenames(term) ?? new List<string>();
             return Json(commitees.Select(c => new { name = c }));
         }
+        [Authorize(Roles = "Admin")]
 
         public IActionResult SearchCategories()
         {

@@ -1,10 +1,12 @@
 ﻿using ItecwebApp.Interfaces;
 using ItecwebApp.Models;
 using Microsoft.AspNetCore.Antiforgery;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ItecwebApp.Controllers
 {
+    [Authorize]
     public class MembersController : Controller
     {
         private readonly ICommiteeMembersDal idl;
@@ -19,6 +21,8 @@ namespace ItecwebApp.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
+
         public IActionResult Create(CommitteMemeber m)
         {
             try

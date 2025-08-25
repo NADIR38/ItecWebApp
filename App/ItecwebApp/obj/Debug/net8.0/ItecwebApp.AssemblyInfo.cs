@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ItecwebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11a84d3b10fffdeb1cd3a63d846fb67f330df898")]
 [assembly: System.Reflection.AssemblyProductAttribute("ItecwebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ItecwebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

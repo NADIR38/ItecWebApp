@@ -14,8 +14,11 @@
     {
         <div class="alert alert-danger" id="error">@TempData["Error"]</div>
     }
-
-    <a asp-action="Add" class="btn btn-primary mb-3">➕ Add New Participant</a>
+    @if(User.IsInRole("Admin"))
+    {
+        <a asp-action="Add" class="btn btn-success mb-3">ADD Participants</a>
+	}
+)
     <input type="text" id="search" class="form-control mb-3" placeholder="Search Participants..." />
 
     <!-- Add the anti-forgery token -->
@@ -31,7 +34,10 @@
                 <th>Payment Status</th>
                 <th>Phone</th>
                 <th>Role</th>
-                <th>Actions</th>
+                @if(User.IsInRole("Admin"))
+                {
+                    <th>Actions</th>
+                }
             </tr>
         </thead>
         <tbody id="body">
@@ -44,13 +50,17 @@
                     <td>@participant.payment_status</td>
                     <td>@participant.phone</td>
                     <td>@participant.role</td>
+                        @if (User.IsInRole("Admin"))
+                        {
                     <td>
+                       
+							
                         <a asp-action="Edit" asp-route-id="@participant.Id" class="btn btn-primary btn-sm">Edit</a>
                         <form asp-action="Delete" asp-route-id="@participant.Id" method="post" style="display:inline;">
                             @Html.AntiForgeryToken()
                             <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                         </form>
-                    </td>
+                    </td>}
                 </tr>
             }
         </tbody>

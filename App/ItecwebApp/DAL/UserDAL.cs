@@ -8,17 +8,19 @@ namespace ItecwebApp.DAL
     {
         public bool RegisterUser(User user)
         {
+            int role_id=DatabaseHelper.getroleid(user.role_name);
             using (var conn = DatabaseHelper.GetConnection())
             {
                 conn.Open();
-                string query = "INSERT INTO users (username, password_hash, email, role_id) " +
-                               "VALUES (@username, @password, @email, @roleId)";
+                string query = "INSERT INTO users (username, password_hash, email, role_id,name) " +
+                               "VALUES (@username, @password, @email, @roleId,@name)";
                 using (var cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@username", user.Username);
                     cmd.Parameters.AddWithValue("@password", user.Password_Hash); // Already hashed in controller
                     cmd.Parameters.AddWithValue("@email", user.Email);
-                    cmd.Parameters.AddWithValue("@roleId", user.Role_Id);
+                    cmd.Parameters.AddWithValue("@roleId", role_id);
+                    cmd.Parameters.AddWithValue("@name", user.Name);
 
                     return cmd.ExecuteNonQuery() > 0;
                 }
@@ -30,8 +32,8 @@ namespace ItecwebApp.DAL
             using (var conn = DatabaseHelper.GetConnection())
             {
                 conn.Open();
-                string query = "SELECT user_id, username, password_hash, email, role_id, is_email_confirmed " +
-                               "FROM users WHERE username = @username";
+                string query = "SELECT u.user_id, u.username, u.password_hash, u.email, u.role_id, u.name,r.role_name " +
+                               "FROM users u join roles r on r.role_id=u.role_id WHERE u.username = @username";
                 using (var cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@username", username);
@@ -46,7 +48,8 @@ namespace ItecwebApp.DAL
                                 Password_Hash = reader.GetString("password_hash"),
                                 Email = reader.GetString("email"),
                                 Role_Id = reader.GetInt32("role_id"),
-                                Is_Email_Confirmed = reader.GetBoolean("is_email_confirmed")
+                                Name = reader.GetString("name"),
+                                role_name = reader.GetString("role_name")
                             };
                         }
                     }

@@ -6,22 +6,25 @@
 <div class="container">
     <h1 class="text-center mt-5 mb-4">Sponsors</h1>
 
-    <!-- Button to open modal -->
-    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#sponsorModal">
-        Add Sponsor
-    </button>
+    @if (User.IsInRole("Admin"))
+    {
+        <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#sponsorModal">
+            Add Sponsor
+        </button>
+    }
     <div class="rounded-2 row-cols-2" style="padding:10px">
-<input type="text" name="search" value="" id="search"  placeholder="Search Sponsors"/>
-</div>
-  
+        <input type="text" name="search" value="" id="search" placeholder="Search Sponsors" />
+    </div>
 
-    <!-- Sponsors Table -->
     <table class="table table-striped table-bordered">
         <thead>
             <tr>
                 <th>Sponsor Name</th>
                 <th>Contact No</th>
-                <th>Actions</th>
+                @if (User.IsInRole("Admin"))
+                {
+                    <th>Actions</th>
+                }
             </tr>
         </thead>
         <tbody id="tbody">
@@ -31,13 +34,16 @@
                     <td>@sponsor.SponsorName</td>
                     <td>@sponsor.ContactNo</td>
                     <td>
-                        <a href="javascript:void(0);"
-                           class="btn btn-warning btn-edit"
-                           data-id="@sponsor.SponsorId"
-                           data-name="@sponsor.SponsorName"
-                           data-contact="@sponsor.ContactNo">
-                            Edit
-                        </a>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <a href="javascript:void(0);"
+                               class="btn btn-warning btn-edit"
+                               data-id="@sponsor.SponsorId"
+                               data-name="@sponsor.SponsorName"
+                               data-contact="@sponsor.ContactNo">
+                                Edit
+                            </a>
+                        }
                     </td>
                 </tr>
             }

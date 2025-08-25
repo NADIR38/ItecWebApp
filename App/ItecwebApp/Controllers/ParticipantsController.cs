@@ -1,10 +1,12 @@
 ﻿using ItecwebApp.DAL;
 using ItecwebApp.Interfaces;
 using ItecwebApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ItecwebApp.Controllers
 {
+    [Authorize]
     public class ParticipantsController : Controller
     {
         private readonly IParticipantsDAL idl;
@@ -48,6 +50,8 @@ namespace ItecwebApp.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
+
         public IActionResult Edit(int id)
         {
             var list = DatabaseHelper.geteventnames("");
@@ -62,7 +66,9 @@ namespace ItecwebApp.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken] // Add this for consistency
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
+        // Add this for consistency
         public IActionResult Edit(Models.Participants participant)
         {
             if (ModelState.IsValid)
@@ -85,6 +91,8 @@ namespace ItecwebApp.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
+
         public IActionResult Delete(int id)
         {
             var success = idl.DeleteParticipant(id);

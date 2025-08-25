@@ -1,10 +1,13 @@
 ﻿using ItecwebApp.Interfaces;
 using ItecwebApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.Design.Serialization;
 
 namespace ItecwebApp.Controllers
 {
+    [Authorize]
+
     public class SponsorsController : Controller
     {
         private readonly ISponsorsDAl _sponsorsDal;

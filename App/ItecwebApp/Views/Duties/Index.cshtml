@@ -24,7 +24,10 @@
                     <th>Description</th>
                     <th>Deadline</th>
                     <th>Status</th>
-                    <th>Actions</th>
+                    @if (User.IsInRole("Admin") || User.IsInRole("Faculty"))
+                    {
+                        <th>Actions</th>
+                    }
                 </tr>
             </thead>
             <tbody id="dutyTableBody">
@@ -36,14 +39,16 @@
                         <td>@duty.description.ToUpper()</td>
                         <td>@duty.Deadline.ToShortDateString()</td>
                         <td>@duty.status.ToUpper()</td>
-                        <td>
-                            <!-- ✅ button instead of <a href="#"> -->
+                        @if (User.IsInRole("Admin")||User.IsInRole("Faculty"))
+                        {
+                            <td>
+                                <!-- ✅ button instead of <a href="#"> -->
                             <button type="button" class="btn btn-warning btn_edit"
                                     data-id="@duty.duty_id"
                                     data-status="@duty.status">
                                 Edit
                             </button>
-                        </td>
+                        </td>}
                     </tr>
                 }
             </tbody>

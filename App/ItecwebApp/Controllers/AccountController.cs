@@ -1,129 +1,120 @@
-﻿using ItecwebApp.BL;
-using ItecwebApp.DAL;
+﻿using ItecwebApp.DAL;
 using ItecwebApp.Helpers;
 using ItecwebApp.Interfaces;
 using ItecwebApp.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using MySql.Data.MySqlClient;
 using System.Security.Claims;
+using static User;
 
 namespace ItecwebApp.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly IUserDAL _userDal;
+        private readonly IUserDAL idl;
 
-        public AccountController(IUserDAL userDal)
+        public AccountController(IUserDAL idl)
         {
-            _userDal = userDal;
+            this.idl = idl;
+        }
+
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
         }
 
         [HttpGet]
         public IActionResult Login()
         {
-            return View(new LoginViewModel());
+            return View();
         }
-
         [HttpPost]
-        public IActionResult Login(LoginViewModel model)
+        [ValidateAntiForgeryToken]
+        public IActionResult Register(RegisterViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
+                return View(model);
+
+            // default role = Student
+            string roleToAssign = "Student";
+
+            // If Admin is logged in, allow them to pick Faculty/Admin
+            if (User.Identity.IsAuthenticated && User.IsInRole("Admin") && !string.IsNullOrEmpty(model.RoleName))
             {
-                var user = _userDal.GetUserByUsername(model.Username); // fetch user with hash
-                if (user != null && PasswordHelper.VerifyPassword(model.Password, user.Password_Hash))
-                {
-                    if (!user.Is_Email_Confirmed)
-                    {
-                        ModelState.AddModelError("", "Please confirm your email before logging in.");
-                        return View(model);
-                    }
-
-                    HttpContext.Session.SetString("Username", user.Username);
-                    HttpContext.Session.SetInt32("Role_Id", user.Role_Id);
-
-                    return user.Role_Id switch
-                    {
-                        1 => RedirectToAction("Index", "Home"),
-                        2 => RedirectToAction("Index", "Members"),
-                        3 => RedirectToAction("Index", "Participants"),
-                        _ => RedirectToAction("Login", "Account")
-                    };
-                }
-
-                ModelState.AddModelError("", "Invalid credentials.");
+                roleToAssign = model.RoleName;
             }
-            return View(model);
-        }
 
-        [HttpGet]
-        public IActionResult Signup()
-        {
-            return View(new SignupViewModel());
-        }
-
-        [HttpPost]
-        public IActionResult Signup(SignupViewModel model)
-        {
-            if (ModelState.IsValid)
+            var user = new User
             {
-                var newUser = new User
-                {
-                    Username = model.Username,
-                    Email = model.Email,
-                    Password_Hash = PasswordHelper.HashPassword(model.Password),
-                    Role_Id = model.Role_Id
-                };
+                Name = model.Name,
+                Username = model.Username,
+                Email = model.Email,
+                role_name = roleToAssign, // safe role assignment
+                Password_Hash = PasswordHelper.HashPassword(model.Password)
+            };
 
-                if (_userDal.RegisterUser(newUser))
-                {
-                    // Generate token (simple example: base64 of email)
-                    var token = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(newUser.Email));
-
-                    var confirmLink = Url.Action("ConfirmEmail", "Account", new { email = newUser.Email, token = token },
-                                                 Request.Scheme);
-
-                    EmailSender.Send(newUser.Email, "Confirm your account",
-                        $"Please confirm your email by clicking <a href='{confirmLink}'>here</a>");
-
-                    return View("CheckYourEmail"); // Create a view to tell user to check inbox
-                }
-                ModelState.AddModelError("", "Error while registering.");
-            }
-            return View(model);
-        }
-
-
-        public IActionResult ConfirmEmail(string email, string token)
-        {
-            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(token))
+            if (idl.RegisterUser(user))
+            {
+                TempData["SuccessMessage"] = "Registration successful! Please log in.";
                 return RedirectToAction("Login");
-
-            var decodedEmail = System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(token));
-
-            if (decodedEmail == email)
-            {
-                using (var conn = DatabaseHelper.GetConnection())
-                {
-                    conn.Open();
-                    string query = "UPDATE users SET is_email_confirmed = 1 WHERE email = @Email";
-                    using (var cmd = new MySqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Email", email);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                return View("ConfirmEmailSuccess"); // Create a simple success view
             }
 
-            return View("Error");
+            ModelState.AddModelError("", "Registration failed. Username or Email might already exist.");
+            return View(model);
         }
 
-        public IActionResult Logout()
+
+        [HttpPost]
+        public async Task<IActionResult> Login(User u)
         {
-            HttpContext.Session.Clear();
+            try
+            {
+                var username = u.Username;
+                var password = u.Password; // <-- plain password
+
+                var user = idl.GetUserByUsername(username);
+
+                if (user != null && PasswordHelper.VerifyPassword(password, user.Password_Hash))
+                {
+                    var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, user.Username),
+                new Claim(ClaimTypes.NameIdentifier, user.User_Id.ToString()),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Role, user.role_name) // actual role
+            };
+
+                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+
+                    await HttpContext.SignInAsync(
+                        CookieAuthenticationDefaults.AuthenticationScheme,
+                        claimsPrincipal,
+                        new AuthenticationProperties
+                        {
+                            IsPersistent = true,
+                            ExpiresUtc = DateTime.UtcNow.AddHours(2)
+                        });
+
+                    return RedirectToAction("Index", "Home");
+                }
+
+                ModelState.AddModelError("", "Invalid username or password.");
+                return View();
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "An error occurred: " + ex.Message);
+                return View();
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Login");
         }
         public IActionResult AccessDenied()

@@ -24,7 +24,11 @@
 						<th>Member Name</th>
 						<th>Committee Name</th>
 						<th>Designation</th>
-						<th>Actions</th>   <!-- New -->
+						@if(User.IsInRole("Admin")||User.IsInRole("Faculty"))
+						{
+							<th>Actions</th>
+						}
+)
 					</tr>
 				</thead>
 				<tbody id="memberTableBody">
@@ -34,15 +38,18 @@
 							<td>@member.name.ToUpper()</td>
 							<td>@member.CommiteeName.ToUpper()</td>
 							<td>@member.role_name.ToUpper()</td>
-							<td>
-								<a asp-controller="Duties"
-								   asp-action="Create"
-								   asp-route-name="@member.name"
-								   asp-route-committeename="@member.CommiteeName"
-								   class="btn btn-sm btn-success">
-									Assign Duty
-								</a>
-							</td>
+							@if (User.IsInRole("Admin") || User.IsInRole("Faculty"))
+							{
+								<td>
+									<a asp-controller="Duties"
+									asp-action="Create"
+									asp-route-name="@member.name"
+									asp-route-committeename="@member.CommiteeName"
+									class="btn btn-sm btn-success">
+										Assign Duty
+									</a>
+								</td>
+							}
 						</tr>
 					}
 				</tbody>

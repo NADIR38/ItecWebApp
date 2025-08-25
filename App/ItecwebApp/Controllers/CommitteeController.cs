@@ -1,9 +1,11 @@
 ﻿using ItecwebApp.Interfaces;
 using ItecwebApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ItecwebApp.Controllers
 {
+    [Authorize]
     public class CommitteeController : Controller
     {
         private readonly ICommiteesDAl _committeeDAl;
@@ -12,23 +14,24 @@ namespace ItecwebApp.Controllers
             _committeeDAl = committeeDAl;
         }
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(Commitees c)
         {
             if (!ModelState.IsValid)
             {
-                // Return partial view of the modal content with validation messages
                 return PartialView("_CommitteeModalBody", c);
             }
 
             var result = _committeeDAl.AddCommitee(c);
             if (result)
             {
-                // Return a small message or flag indicating success
                 return Content("<div id='SuccessMessage'>Committee added successfully!</div>");
             }
 
