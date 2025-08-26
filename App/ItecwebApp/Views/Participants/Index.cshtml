@@ -67,6 +67,9 @@
     </table>
 </div>
 </div>
+<script>
+    const currentUserRole = '@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value';
+</script>
 
 <script>
     // Auto-hide messages
@@ -111,35 +114,40 @@
                 let token = tokenInput ? tokenInput.value : '';
 
                 if (data && data.length > 0) {
-                    data.forEach(participant => {
-                        let row = document.createElement("tr");
+                       data.forEach(participant => {
+        let row = document.createElement("tr");
 
-                        // Handle both PascalCase and camelCase property names
-                        let id = participant.Id || participant.id;
-                        let name = participant.Name || participant.name;
-                        let email = participant.Email || participant.email;
-                        let eventName = participant.event_name || participant.Event_Name;
-                        let paymentStatus = participant.payment_status || participant.Payment_Status;
-                        let phone = participant.phone || participant.Phone || '';
-                        let institute = participant.institute || participant.Institute || '';
-                        let role = participant.role || participant.Role || '';
+        let id = participant.Id || participant.id;
+        let name = participant.Name || participant.name;
+        let eventName = participant.event_name || participant.Event_Name;
+        let paymentStatus = participant.payment_status || participant.Payment_Status;
+        let phone = participant.phone || participant.Phone || '';
+        let role = participant.role || participant.Role || '';
 
-                        row.innerHTML = `
-                            <td>${id}</td>
-                            <td>${name}</td>
-                            <td>${eventName}</td>
-                            <td>${paymentStatus}</td>
-                            <td>${phone}</td>
-                            <td>${role}</td>
-                            <td>
-                                <a href="/Participants/Edit/${id}" class="btn btn-primary btn-sm">Edit</a>
-                                <form action="/Participants/Delete/${id}" method="post" style="display:inline;">
-                                    <input type="hidden" name="__RequestVerificationToken" value="${token}" />
-                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                                </form>
-                            </td>`;
-                        tbody.appendChild(row);
-                    });
+        // Build row
+        row.innerHTML = `
+            <td>${id}</td>
+            <td>${name}</td>
+            <td>${eventName}</td>
+            <td>${paymentStatus}</td>
+            <td>${phone}</td>
+            <td>${role}</td>
+            ${
+                currentUserRole === "Admin"
+                    ? `<td>
+                            <a href="/Participants/Edit/${id}" class="btn btn-primary btn-sm">Edit</a>
+                            <form action="/Participants/Delete/${id}" method="post" style="display:inline;">
+                                <input type="hidden" name="__RequestVerificationToken" value="${token}" />
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>
+                       </td>`
+                    : ""
+            }
+        `;
+
+        tbody.appendChild(row);
+    });
+
                 } else {
                     // Show "No results found" message
                     let row = document.createElement("tr");

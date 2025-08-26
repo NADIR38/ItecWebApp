@@ -3,24 +3,100 @@
   "WorkspaceRootPath": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\bl\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:bl\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\itecwebapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:itecwebapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\participants\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:views\\participants\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\sponsors\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:views\\sponsors\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\account\\verifyotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:views\\account\\verifyotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\models\\participants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:models\\participants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\dal\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:dal\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\account\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:views\\account\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\account\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:views\\account\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\vendor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:views\\vendor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\dal\\userdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:dal\\userdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\interfaces\\iuserdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:interfaces\\iuserdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\itecwebapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:itecwebapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\duties\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -31,24 +107,12 @@
       "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:views\\members\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\vendor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:views\\vendor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\controllers\\dutiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:controllers\\dutiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\controllers\\memberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:controllers\\memberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\participants\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:views\\participants\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\events\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -87,10 +151,6 @@
       "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:dal\\commiteemembersdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\sponsors\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:views\\sponsors\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\models\\edition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:models\\edition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -103,10 +163,6 @@
       "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:models\\vendors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\models\\participants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:models\\participants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\dal\\participantsdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:dal\\participantsdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -115,20 +171,8 @@
       "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:dal\\sponsorsdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\dal\\userdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:dal\\userdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\dal\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:dal\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\controllers\\participantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -167,24 +211,8 @@
       "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:controllers\\committeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\bl\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:bl\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\models\\passwordhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:models\\passwordhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\itecwebapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:itecwebapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\dal\\dutiesdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -229,10 +257,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\views\\participants\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:views\\participants\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\interfaces\\iuserdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|solutionrelative:interfaces\\iuserdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10319F01-9C7D-472C-8E1E-DF34BCE6810A}|ItecwebApp.csproj|d:\\projects\\websites\\itecwebapp\\itecwebapp\\app\\itecwebapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -302,7 +326,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -326,137 +350,226 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Members\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Members\\Index.cshtml",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Members\\Index.cshtml",
-              "RelativeToolTip": "Views\\Members\\Index.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-18T16:12:40.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Vendor\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Vendor\\Index.cshtml",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Vendor\\Index.cshtml",
-              "RelativeToolTip": "Views\\Vendor\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-18T02:13:36.432Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAADIAAAAAAAAAAAAswFIAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-15T16:33:32.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DutiesController.cs",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\DutiesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DutiesController.cs",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\DutiesController.cs",
-              "RelativeToolTip": "Controllers\\DutiesController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAuwEgAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T15:49:31.72Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Duties\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Duties\\Index.cshtml",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Duties\\Index.cshtml",
-              "RelativeToolTip": "Views\\Duties\\Index.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAABoAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-19T18:20:41.332Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-24T20:09:18.382Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAswDkAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-24T20:03:36.317Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
               "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwEIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABYBAAAAAAAAAAAAwEEBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T19:19:08.335Z",
+              "WhenOpened": "2025-08-24T19:19:08.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\BL\\EmailService.cs",
+              "RelativeDocumentMoniker": "BL\\EmailService.cs",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\BL\\EmailService.cs",
+              "RelativeToolTip": "BL\\EmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:16:51.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Sponsors\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Sponsors\\Index.cshtml",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Sponsors\\Index.cshtml",
+              "RelativeToolTip": "Views\\Sponsors\\Index.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-17T18:54:23.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Participants\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Participants\\Index.cshtml",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Participants\\Index.cshtml",
+              "RelativeToolTip": "Views\\Participants\\Index.cshtml",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAAAJUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-21T01:27:37.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ItecwebApp.csproj",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\ItecwebApp.csproj",
+              "RelativeDocumentMoniker": "ItecwebApp.csproj",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\ItecwebApp.csproj",
+              "RelativeToolTip": "ItecwebApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-15T16:00:57.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-15T16:05:02.167Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAcwDAAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAYwFYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T00:19:11.032Z",
+              "WhenOpened": "2025-08-15T16:35:15.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "web.config",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\web.config",
+              "RelativeDocumentMoniker": "web.config",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\web.config",
+              "RelativeToolTip": "web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-08-26T19:13:40.435Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-26T19:52:56.932Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "MembersController.cs",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\MembersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MembersController.cs",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\MembersController.cs",
-              "RelativeToolTip": "Controllers\\MembersController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T15:52:34.616Z",
-              "EditorCaption": ""
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-24T20:03:36.317Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-24T20:09:18.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "VerifyOtp.cshtml",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Account\\VerifyOtp.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\VerifyOtp.cshtml",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Account\\VerifyOtp.cshtml",
+              "RelativeToolTip": "Views\\Account\\VerifyOtp.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-26T19:29:35.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "participants.cs",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Models\\participants.cs",
+              "RelativeDocumentMoniker": "Models\\participants.cs",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Models\\participants.cs",
+              "RelativeToolTip": "Models\\participants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T17:00:49.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\DAL\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "DAL\\DatabaseHelper.cs",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\DAL\\DatabaseHelper.cs",
+              "RelativeToolTip": "DAL\\DatabaseHelper.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAArwJ4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T16:04:39.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Vendor\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Vendor\\Index.cshtml",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Vendor\\Index.cshtml",
+              "RelativeToolTip": "Views\\Vendor\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-18T02:13:36.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Account\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Index.cshtml",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Account\\Index.cshtml",
+              "RelativeToolTip": "Views\\Account\\Index.cshtml",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAswE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T18:04:46.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-22T02:01:27.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Account\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Edit.cshtml",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Account\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Account\\Edit.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T18:34:48.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
@@ -464,64 +577,155 @@
               "RelativeToolTip": "Views\\_ViewImports.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-20T16:56:54.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T16:56:54.009Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Participants\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Participants\\Index.cshtml",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Participants\\Index.cshtml",
-              "RelativeToolTip": "Views\\Participants\\Index.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAADUAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 19,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAuwD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T00:19:11.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACYAAABrAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-21T01:27:37.782Z",
+              "WhenOpened": "2025-08-15T16:33:32.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UserDAL.cs",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\DAL\\UserDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\UserDAL.cs",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\DAL\\UserDAL.cs",
+              "RelativeToolTip": "DAL\\UserDAL.cs",
+              "ViewState": "AgIAAMUAAAAAAAAAAAAowPYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T00:20:20.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ItecwebApp",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\ItecwebApp.csproj",
+              "RelativeDocumentMoniker": "ItecwebApp.csproj",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\ItecwebApp.csproj",
+              "RelativeToolTip": "ItecwebApp.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-25T17:42:57.335Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 22,
+              "Title": "IUserDAL.cs",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Interfaces\\IUserDAL.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IUserDAL.cs",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Interfaces\\IUserDAL.cs",
+              "RelativeToolTip": "Interfaces\\IUserDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T00:21:19.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Duties\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Duties\\Index.cshtml",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Duties\\Index.cshtml",
+              "RelativeToolTip": "Views\\Duties\\Index.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAIBJwBoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-19T18:20:41.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "DutiesController.cs",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\DutiesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DutiesController.cs",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\DutiesController.cs",
+              "RelativeToolTip": "Controllers\\DutiesController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAuwEgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T15:49:31.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Members\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Members\\Index.cshtml",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Members\\Index.cshtml",
+              "RelativeToolTip": "Views\\Members\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAIBJwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-18T16:12:40.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "MembersController.cs",
+              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\MembersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MembersController.cs",
+              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\MembersController.cs",
+              "RelativeToolTip": "Controllers\\MembersController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T15:52:34.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Events\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Events\\Index.cshtml",
               "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Events\\Index.cshtml",
               "RelativeToolTip": "Views\\Events\\Index.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAABEAAABMAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAIBJwBEAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-16T12:02:08.962Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-16T12:02:08.962Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 29,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Events\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Events\\Create.cshtml",
               "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Events\\Create.cshtml",
               "RelativeToolTip": "Views\\Events\\Create.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAF4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAIBJwF4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-16T03:15:54.24Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-16T03:15:54.24Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 30,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Editions\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Editions\\Index.cshtml",
               "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Editions\\Index.cshtml",
               "RelativeToolTip": "Views\\Editions\\Index.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAsAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-15T16:28:57.033Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-15T16:28:57.033Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 31,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Editions\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Editions\\Create.cshtml",
@@ -529,12 +733,11 @@
               "RelativeToolTip": "Views\\Editions\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-15T17:11:15.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-15T17:11:15.138Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 32,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Duties\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Duties\\Create.cshtml",
@@ -542,12 +745,11 @@
               "RelativeToolTip": "Views\\Duties\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-19T15:52:08.544Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T15:52:08.544Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 33,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Committee\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Committee\\Create.cshtml",
@@ -555,12 +757,11 @@
               "RelativeToolTip": "Views\\Committee\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-15T22:55:39.992Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-15T22:55:39.992Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 34,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -568,12 +769,11 @@
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-22T00:45:13.503Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-22T00:45:13.503Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 35,
               "Title": "CommiteesDAl.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\DAL\\CommiteesDAl.cs",
               "RelativeDocumentMoniker": "DAL\\CommiteesDAl.cs",
@@ -581,12 +781,11 @@
               "RelativeToolTip": "DAL\\CommiteesDAl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T19:55:57.703Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-15T19:55:57.703Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 36,
               "Title": "CommiteeMembersDal.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\DAL\\CommiteeMembersDal.cs",
               "RelativeDocumentMoniker": "DAL\\CommiteeMembersDal.cs",
@@ -594,25 +793,11 @@
               "RelativeToolTip": "DAL\\CommiteeMembersDal.cs",
               "ViewState": "AgIAAGcAAAAAAAAAAAAkwB4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T03:30:45.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T03:30:45.049Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Sponsors\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Sponsors\\Index.cshtml",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Sponsors\\Index.cshtml",
-              "RelativeToolTip": "Views\\Sponsors\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-17T18:54:23.532Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 37,
               "Title": "Edition.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Models\\Edition.cs",
               "RelativeDocumentMoniker": "Models\\Edition.cs",
@@ -620,12 +805,11 @@
               "RelativeToolTip": "Models\\Edition.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T15:55:21.191Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-15T15:55:21.191Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 38,
               "Title": "SponsorsController.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\SponsorsController.cs",
               "RelativeDocumentMoniker": "Controllers\\SponsorsController.cs",
@@ -633,12 +817,11 @@
               "RelativeToolTip": "Controllers\\SponsorsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-17T18:41:17.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-17T18:41:17.011Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 39,
               "Title": "Vendors.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Models\\Vendors.cs",
               "RelativeDocumentMoniker": "Models\\Vendors.cs",
@@ -646,25 +829,11 @@
               "RelativeToolTip": "Models\\Vendors.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T01:52:41.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T01:52:41.943Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "participants.cs",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Models\\participants.cs",
-              "RelativeDocumentMoniker": "Models\\participants.cs",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Models\\participants.cs",
-              "RelativeToolTip": "Models\\participants.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAgwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T17:00:49.773Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 40,
               "Title": "ParticipantsDAl.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\DAL\\ParticipantsDAl.cs",
               "RelativeDocumentMoniker": "DAL\\ParticipantsDAl.cs",
@@ -672,12 +841,11 @@
               "RelativeToolTip": "DAL\\ParticipantsDAl.cs",
               "ViewState": "AgIAAHYAAAAAAAAAAAAQwIAAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T17:04:12.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T17:04:12.453Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 41,
               "Title": "SponsorsDAl.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\DAL\\SponsorsDAl.cs",
               "RelativeDocumentMoniker": "DAL\\SponsorsDAl.cs",
@@ -685,25 +853,11 @@
               "RelativeToolTip": "DAL\\SponsorsDAl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-17T18:35:27.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-17T18:35:27.261Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "UserDAL.cs",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\DAL\\UserDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\UserDAL.cs",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\DAL\\UserDAL.cs",
-              "RelativeToolTip": "DAL\\UserDAL.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAowD4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T00:20:20.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 42,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -711,24 +865,11 @@
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T16:29:55.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-15T16:29:55.469Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "DatabaseHelper.cs",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\DAL\\DatabaseHelper.cs",
-              "RelativeDocumentMoniker": "DAL\\DatabaseHelper.cs",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\DAL\\DatabaseHelper.cs",
-              "RelativeToolTip": "DAL\\DatabaseHelper.cs",
-              "ViewState": "AgIAAFABAAAAAAAAAAAiwAEBAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T16:04:39.259Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 43,
               "Title": "ParticipantsController.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\ParticipantsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ParticipantsController.cs",
@@ -740,19 +881,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAswE4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T16:35:15.859Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 45,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
@@ -764,7 +893,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 44,
               "Title": "AccessDenied.cshtml",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Account\\AccessDenied.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\AccessDenied.cshtml",
@@ -776,19 +905,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 46,
               "Title": "VenueController.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\VenueController.cs",
               "RelativeDocumentMoniker": "Controllers\\VenueController.cs",
               "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\VenueController.cs",
               "RelativeToolTip": "Controllers\\VenueController.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAkwAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAA5wAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-15T19:00:07.557Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 47,
               "Title": "VendorController.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\VendorController.cs",
               "RelativeDocumentMoniker": "Controllers\\VendorController.cs",
@@ -800,7 +929,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 48,
               "Title": "EventsController.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\EventsController.cs",
               "RelativeDocumentMoniker": "Controllers\\EventsController.cs",
@@ -812,7 +941,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 49,
               "Title": "EditionsController.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\EditionsController.cs",
               "RelativeDocumentMoniker": "Controllers\\EditionsController.cs",
@@ -824,7 +953,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 50,
               "Title": "Commitees.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Models\\Commitees.cs",
               "RelativeDocumentMoniker": "Models\\Commitees.cs",
@@ -836,31 +965,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 51,
               "Title": "CommitteeController.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\CommitteeController.cs",
               "RelativeDocumentMoniker": "Controllers\\CommitteeController.cs",
               "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Controllers\\CommitteeController.cs",
               "RelativeToolTip": "Controllers\\CommitteeController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBcAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-15T22:49:51.498Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "EmailSender.cs",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\BL\\EmailSender.cs",
-              "RelativeDocumentMoniker": "BL\\EmailSender.cs",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\BL\\EmailSender.cs",
-              "RelativeToolTip": "BL\\EmailSender.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T09:16:51.616Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 52,
               "Title": "PasswordHelper.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Models\\PasswordHelper.cs",
               "RelativeDocumentMoniker": "Models\\PasswordHelper.cs",
@@ -872,43 +989,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "ItecwebApp.csproj",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\ItecwebApp.csproj",
-              "RelativeDocumentMoniker": "ItecwebApp.csproj",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\ItecwebApp.csproj",
-              "RelativeToolTip": "ItecwebApp.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-15T16:00:57.002Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-15T16:05:02.167Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-22T02:01:27.294Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 53,
               "Title": "DutiesDAl.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\DAL\\DutiesDAl.cs",
               "RelativeDocumentMoniker": "DAL\\DutiesDAl.cs",
@@ -920,7 +1001,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 54,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Venue\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Venue\\Index.cshtml",
@@ -932,7 +1013,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 55,
               "Title": "Duties.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Models\\Duties.cs",
               "RelativeDocumentMoniker": "Models\\Duties.cs",
@@ -944,7 +1025,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 56,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Venue\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Venue\\Edit.cshtml",
@@ -956,7 +1037,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 57,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Venue\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Venue\\Create.cshtml",
@@ -968,19 +1049,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 58,
               "Title": "Error.cshtml",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
               "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Shared\\Error.cshtml",
               "RelativeToolTip": "Views\\Shared\\Error.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAIBZwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-08-22T01:16:11.535Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 59,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -992,7 +1073,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 62,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
@@ -1004,7 +1085,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 61,
               "Title": "Add.cshtml",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Participants\\Add.cshtml",
               "RelativeDocumentMoniker": "Views\\Participants\\Add.cshtml",
@@ -1016,43 +1097,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 60,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Participants\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Participants\\Create.cshtml",
               "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Participants\\Create.cshtml",
               "RelativeToolTip": "Views\\Participants\\Create.cshtml",
-              "ViewState": "AgIAADAAAAAAAAAAAIBJwA0AAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAIBZwA0AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-08-21T01:37:39.385Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 63,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Participants\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Participants\\Edit.cshtml",
               "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Views\\Participants\\Edit.cshtml",
               "RelativeToolTip": "Views\\Participants\\Edit.cshtml",
-              "ViewState": "AgIAAEsAAAAAAAAAAIBJwGEAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAIBZwGEAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-08-21T02:19:22.545Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "IUserDAL.cs",
-              "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Interfaces\\IUserDAL.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IUserDAL.cs",
-              "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Interfaces\\IUserDAL.cs",
-              "RelativeToolTip": "Interfaces\\IUserDAL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T00:21:19.92Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 64,
               "Title": "site.css",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -1064,7 +1133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 65,
               "Title": "IDutiesDAl.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Interfaces\\IDutiesDAl.cs",
               "RelativeDocumentMoniker": "Interfaces\\IDutiesDAl.cs",
@@ -1076,7 +1145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 66,
               "Title": "VendorsDAl.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\DAL\\VendorsDAl.cs",
               "RelativeDocumentMoniker": "DAL\\VendorsDAl.cs",
@@ -1088,7 +1157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 67,
               "Title": "CommitteMemeber.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Models\\CommitteMemeber.cs",
               "RelativeDocumentMoniker": "Models\\CommitteMemeber.cs",
@@ -1100,7 +1169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 68,
               "Title": "IVenueDAl.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Interfaces\\IVenueDAl.cs",
               "RelativeDocumentMoniker": "Interfaces\\IVenueDAl.cs",
@@ -1112,7 +1181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 69,
               "Title": "ISponsorsDAl.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Interfaces\\ISponsorsDAl.cs",
               "RelativeDocumentMoniker": "Interfaces\\ISponsorsDAl.cs",
@@ -1124,7 +1193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 70,
               "Title": "Sponsors.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Models\\Sponsors.cs",
               "RelativeDocumentMoniker": "Models\\Sponsors.cs",
@@ -1136,7 +1205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 71,
               "Title": "EditionDAl.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\DAL\\EditionDAl.cs",
               "RelativeDocumentMoniker": "DAL\\EditionDAl.cs",
@@ -1148,31 +1217,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 72,
               "Title": "EventsDAll.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Interfaces\\EventsDAll.cs",
               "RelativeDocumentMoniker": "Interfaces\\EventsDAll.cs",
               "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Interfaces\\EventsDAll.cs",
               "RelativeToolTip": "Interfaces\\EventsDAll.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAIBJwFAAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAIBZwFAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-16T02:04:39.503Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 73,
               "Title": "VenueDAl.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\DAL\\VenueDAl.cs",
               "RelativeDocumentMoniker": "DAL\\VenueDAl.cs",
               "ToolTip": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\DAL\\VenueDAl.cs",
               "RelativeToolTip": "DAL\\VenueDAl.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAIBQwHIAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAuwHIAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-15T18:54:26.558Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 74,
               "Title": "Events.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Models\\Events.cs",
               "RelativeDocumentMoniker": "Models\\Events.cs",
@@ -1184,7 +1253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 75,
               "Title": "Venues.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Models\\Venues.cs",
               "RelativeDocumentMoniker": "Models\\Venues.cs",
@@ -1196,7 +1265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 76,
               "Title": "ICommiteesDAl.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Interfaces\\ICommiteesDAl.cs",
               "RelativeDocumentMoniker": "Interfaces\\ICommiteesDAl.cs",
@@ -1208,7 +1277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 77,
               "Title": "IEditionDAl.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Interfaces\\IEditionDAl.cs",
               "RelativeDocumentMoniker": "Interfaces\\IEditionDAl.cs",
@@ -1220,7 +1289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 78,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "D:\\projects\\Websites\\ItecWebApp\\ItecWebApp\\App\\ItecwebApp\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",

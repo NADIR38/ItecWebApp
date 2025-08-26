@@ -1,19 +1,14 @@
 ﻿using ItecwebApp.DAL;
 using ItecwebApp.Interfaces;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using AspNet.Security.OAuth.GitHub; // ✅ Needed for GitHub
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-// ✅ Register HttpContextAccessor (optional, but useful for DI)
 builder.Services.AddHttpContextAccessor();
-
-// ✅ Add memory cache (required for session)
 builder.Services.AddDistributedMemoryCache();
-
-// ✅ Add session support (optional, only if you use HttpContext.Session)
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30);
@@ -22,14 +17,31 @@ builder.Services.AddSession(options =>
 });
 
 // ✅ Configure authentication & authorization
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(options =>
-    {
-        options.LoginPath = "/Account/Login";           // redirect if not logged in
-        options.AccessDeniedPath = "/Account/AccessDenied"; // redirect if role denied
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
-        options.SlidingExpiration = true;              // refresh timeout on activity
-    });
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+})
+.AddCookie(options =>
+{
+    options.LoginPath = "/Account/Login";
+    options.AccessDeniedPath = "/Account/AccessDenied";
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+    options.SlidingExpiration = true;
+})
+// ✅ Google Login
+.AddGoogle(options =>
+{
+    options.ClientId = builder.Configuration["Authentication:Google:ClientId"];
+    options.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
+})
+// ✅ GitHub Login
+.AddGitHub(options =>
+{
+    options.ClientId = builder.Configuration["Authentication:GitHub:ClientId"];
+    options.ClientSecret = builder.Configuration["Authentication:GitHub:ClientSecret"];
+});
 
 builder.Services.AddAuthorization();
 
@@ -48,10 +60,10 @@ builder.Services.AddScoped<ICommiteeMembersDal, CommiteeMembersDal>();
 builder.Services.AddScoped<IDutiesDAl, DutiesDAl>();
 builder.Services.AddScoped<IParticipantsDAL, ParticipantsDAL>();
 builder.Services.AddScoped<IUserDAL, UserDAL>();
-
+builder.Services.AddTransient<EmailService>();
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure pipeline
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -62,12 +74,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
-// ✅ Enable authentication & authorization
 app.UseAuthentication();
 app.UseAuthorization();
-
-// ✅ Enable session middleware (optional)
 app.UseSession();
 
 // Default routing

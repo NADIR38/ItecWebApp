@@ -481,3 +481,6 @@ D:\projects\Websites\ItecWebApp\ItecWebApp\App\ItecwebApp\obj\Debug\net8.0\Itecw
 D:\projects\Websites\ItecWebApp\ItecWebApp\App\ItecwebApp\obj\Debug\net8.0\ItecwebApp.genruntimeconfig.cache
 D:\projects\Websites\ItecWebApp\ItecWebApp\App\ItecwebApp\obj\Debug\net8.0\ref\ItecwebApp.dll
 D:\projects\Websites\ItecWebApp\ItecWebApp\App\ItecwebApp\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\projects\Websites\ItecWebApp\ItecWebApp\App\ItecwebApp\bin\Debug\net8.0\AspNet.Security.OAuth.GitHub.dll
+D:\projects\Websites\ItecWebApp\ItecWebApp\App\ItecwebApp\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Google.dll
+D:\projects\Websites\ItecWebApp\ItecWebApp\App\ItecwebApp\bin\Debug\net8.0\web.config
